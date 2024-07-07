@@ -17,9 +17,7 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
   }, []);
-
   const [start, setStart] = useState(false);
-
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -36,35 +34,32 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
-
   const getDirection = () => {
     if (containerRef.current) {
-      if (direction === 'left') {
+      if (direction === "left") {
         containerRef.current.style.setProperty(
-          '--animation-direction',
-          'forwards'
+          "--animation-direction",
+          "forwards"
         );
       } else {
         containerRef.current.style.setProperty(
-          '--animation-direction',
-          'reverse'
+          "--animation-direction",
+          "reverse"
         );
       }
     }
   };
-
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === 'fast') {
-        containerRef.current.style.setProperty('--animation-duration', '20s');
-      } else if (speed === 'normal') {
-        containerRef.current.style.setProperty('--animation-duration', '40s');
+      if (speed === "fast") {
+        containerRef.current.style.setProperty("--animation-duration", "20s");
+      } else if (speed === "normal") {
+        containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty('--animation-duration', '80s');
+        containerRef.current.style.setProperty("--animation-duration", "80s");
       }
     }
   };
-
   return (
     <div
       ref={containerRef}
@@ -76,7 +71,7 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          'flex min-w-full shrink-0 gap-10 py-4 w-max flex-nowrap',
+          'flex min-w-full shrink-0 gap-14 xlg:gap-20 py-4 w-max flex-nowrap',
           start && 'animate-scroll',
           pauseOnHover && 'hover:animation-play-state:paused'
         )}
@@ -84,7 +79,7 @@ export const InfiniteMovingCards = ({
         {items.map((item, idx) => (
           <li key={idx}>
             <Image
-              width={170}
+              width={70}
               height={1}
               src={item.href}
               alt={item.href}

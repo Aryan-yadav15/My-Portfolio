@@ -26,8 +26,25 @@ module.exports = {
       '2xlg': '1800px',
     },
     extend: {
+      transitionProperty: {
+        'custom-all': 'all',
+      },
+      transitionTimingFunction: {
+        'custom-bezier': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      transitionDuration: {
+        'custom': '150ms',
+        'custom-long': '400ms',
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
+      },
       animation: {
-        scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       colors: {
         customDarkGray: '#161616',
