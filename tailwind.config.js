@@ -28,13 +28,16 @@ module.exports = {
     extend: {
       transitionProperty: {
         'custom-all': 'all',
+        'width': 'width', // Add width as a transition property
       },
       transitionTimingFunction: {
         'custom-bezier': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'ease-in-out': 'ease-in-out', // Add ease-in-out for smooth transitions
       },
       transitionDuration: {
         'custom': '150ms',
         'custom-long': '400ms',
+        '500': '500ms', // Add 500ms duration for smoother transitions
       },
       keyframes: {
         scroll: {

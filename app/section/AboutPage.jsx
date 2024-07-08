@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPage = () => {
   
   return (
-    <div className='sticky h-screen top-0 z-0 bg-gray-200 text-gray-700 px-20 py-20 rounded-[50px]'>
+    <div className='sticky h-[110vh] top-0 z-0 bg-gray-200 text-gray-700 px-20 py-20 rounded-[50px]'>
       <div className="flex flex-row gap-10 justify-end ">
         <section className="flex flex-col gap-10 justify-between">
           <p className="text-4xl border-b-2 border-gray-300 pb-10">

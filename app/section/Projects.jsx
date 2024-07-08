@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { ThreeDCardDemo } from '../components/ui/DemoHoverCard';
 
 const Projects = () => {
     const projectData = [
-        { id: 1, title: 'Project 1', description: 'Description for Project 1', color: 'bg-red-500' },
-        { id: 2, title: 'Project 2', description: 'Description for Project 2', color: 'bg-blue-500' },
-        { id: 3, title: 'Project 3', description: 'Description for Project 3', color: 'bg-green-500' },
+        { id: 1, title: 'Project 1', description: 'Description for Project 1', color: 'bg-red-500', img: '/Mockup/pr1.png' },
+        { id: 2, title: 'Project 2', description: 'Description for Project 2', color: 'bg-blue-500', img: '/Mockup/pr2.png' },
+        { id: 3, title: 'Project 3', description: 'Description for Project 3', color: 'bg-green-500', img: '/Mockup/pr3.png' },
         // Add more projects as needed
     ];
 
@@ -46,14 +47,16 @@ const Projects = () => {
 const ProjectCard = ({ project, onIntersection }) => {
     const { ref, inView } = useInView({
         threshold: 0.5, // Adjust threshold as needed
-        rootMargin: '0px 0px -50% 0px', // Adjust root margin to control when intersection is triggered
-      });
+        rootMargin: '0px 0px -10% 0px', // Adjust root margin to control when intersection is triggered
+    });
 
     return (
         <div
             ref={ref}
-            className={`h-[500px] w-[500px] ${project.color}`}
         >
+            <ThreeDCardDemo
+                project={project}
+            />
             {inView && onIntersection(project.id)} {/* Pass project.id to onIntersection */}
         </div>
     );
