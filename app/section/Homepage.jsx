@@ -13,7 +13,7 @@ const Homepage = () => {
           </h1>
           <h1 className='text-8xl xlg:text-9xl font-medium pt-1'>
             <span className='text-8xl xlg:text-9xl text-Secondarytext font-medium mr-5'>&</span>
-            Fullstack <span className='gold-text'>Engineer</span>
+            Fullstack <span className='gold-text'>Devloper</span>
           </h1>
         </div>
         <div className='py-2 flex flex-row'>
