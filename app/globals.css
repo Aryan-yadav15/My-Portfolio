@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* styles/glow-text.css */
 .gold-text {
   background: url('/gold.png');
@@ -32,4 +37,39 @@
   right: 0;
   top: 0;
   width: 100%;
+}
+
+
+.metallic-card {
+  background: linear-gradient(45deg, #1d1d1d, #610d45, #353535);
+  box-shadow: 10px 10px 10px #471b36, -10px -10px 20px #36071d;
+  border-radius: 15px;
+  border: 2px solid #444444;
+  transition: all 1s ease;
+}
+.metallic-button{
+  background: linear-gradient(45deg, #1d1d1d, #610d45, #353535);
+  border-radius: 100%;
+  border: 2px solid #64002a;
+  transition: all 1s ease;
+}
+
+
+/* styles/globals.css */
+/* styles/globals.css */
+.tech-pill {
+  background: linear-gradient(45deg, #1d1d1d, #610d45, #353535);
+  border-radius: 10%;
+  border: 1px solid #64002a;
+  transition: all 1s ease;
+}
+
+
+/* styles/globals.css */
+.navbar {
+  background-color: rgba(17, 17, 17, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for the glass look */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for a 3D effect */
+
 }

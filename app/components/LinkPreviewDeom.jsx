@@ -6,20 +6,19 @@ import { Milestone } from "lucide-react";
 
 export function LinkPreviewDemo() {
     return (
-        <div className="flex justify-end  h-[28rem] xlg:h-[40rem] flex-col px-4">
-            <div className="flex flex-row justify-between w-[90vw] ">
-                <p className="text-neutral-500 text-start dark:text-neutral-400 text-xl md:text-3xl max-w-3xl  mb-10">
-                    Currently I am working on{" "}
+        <div className="flex justify-end h-[28rem] xlg:h-[40rem] flex-col px-1">
+            <div className="flex flex-col lg:flex-row justify-center items-center lg:w-full max-w-5xl">
+                <p className="text-neutral-500 text-start dark:text-neutral-400 text-xl md:text-3xl mb-10 w-[70vw]">
+                    Currently, I am working on{" "}
                     <LinkPreview url="https://tailwindcss.com" className="font-bold">
                         CampusBuzz
                     </LinkPreview>{" "}
-                    and{" "}it is in devlopment for
+                    which is in development for{" "}
                     <LinkPreview url="https://framer.com/motion" className="font-bold">
                         KIIT Students
                     </LinkPreview>{" "}
-                    for event management
+                    to manage events.
                 </p>
-                
             </div>
         </div>
     );

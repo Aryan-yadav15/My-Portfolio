@@ -40,6 +40,10 @@ module.exports = {
         '500': '500ms', // Add 500ms duration for smoother transitions
       },
       keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
         scroll: {
           to: {
             transform: 'translate(calc(-50% - 0.5rem))',
@@ -47,8 +51,14 @@ module.exports = {
         },
       },
       animation: {
+        gradient: 'gradient 15s ease infinite',
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      
+      backgroundImage: {
+        'radial-gradient': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
+
       colors: {
         customDarkGray: '#161616',
         primaryText: '#ebebeb',

@@ -6,6 +6,9 @@ import AboutPage from "./section/AboutPage";
 import Projects from "./section/Projects";
 import CurrentWorking from "./section/CurrentWorking";
 import MyCv from "./section/MyCv";
+import Testimonial from "./section/Testimonial";
+import Contact from "./section/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +18,10 @@ export default function Home() {
       <Projects />
       <AboutPage />
       <CurrentWorking />
-      <MyCv/>
+      <MyCv />
+      <Testimonial />
+      <Contact />
+      <Footer/>
     </div>
   );
 }
