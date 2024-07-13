@@ -8,7 +8,7 @@ export function LinkPreviewDemo() {
     return (
         <div className="flex justify-end h-[28rem] xlg:h-[40rem] flex-col px-1">
             <div className="flex flex-col lg:flex-row justify-center items-center lg:w-full max-w-5xl">
-                <p className="text-neutral-500 text-start dark:text-neutral-400 text-xl md:text-3xl mb-10 w-[70vw]">
+                <div className="text-neutral-500 text-start dark:text-neutral-400 text-xl md:text-3xl mb-10 w-[70vw]">
                     Currently, I am working on{" "}
                     <LinkPreview url="https://tailwindcss.com" className="font-bold">
                         CampusBuzz
@@ -18,7 +18,7 @@ export function LinkPreviewDemo() {
                         KIIT Students
                     </LinkPreview>{" "}
                     to manage events.
-                </p>
+                </div>
             </div>
         </div>
     );

@@ -17,7 +17,7 @@ const Homepage = () => {
           </h1>
         </div>
         <div className='py-2 flex flex-col md:flex-row'>
-          <div className="flex flex-col flex-2 pr-0 pb-5 md:pr-10 lg:pr-20 lg:border-r border-b border-gray-600  md:border-r-gray-600">
+          <div className="flex flex-col flex-2 pr-0 pb-5 md:pr-10 lg:pr-20 lg:border-r border-b lg:border-b-0 border-gray-600  md:border-r-gray-600">
             <p className='text-gray-500'>BIO</p>
             <h1 className='text-gray-400'>I partner with tech brands from different disciplines to create visually unique experiences. Located in Nagpur, India.</h1>
           </div>

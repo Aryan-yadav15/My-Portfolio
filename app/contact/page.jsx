@@ -66,7 +66,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} >
                 <div className="flex flex-col justify-center items-center lg:flex-row lg:w-[90vw] pt-5 ">
                     <div className="w-[30%] flex lg:h-screen justify-end items-start">
-                        <div className="w-40 h-40 mb-4 rounded-full overflow-hidden">
+                        <div className="w-40 lg:h-40 h-32 mb-4 rounded-full overflow-hidden">
                             <Image
                                 src='/me.jpg'
                                 width={200}
@@ -75,14 +75,14 @@ const Contact = () => {
                             />
                         </div>
                     </div>
-                    <div className="lg:w-[70%] pl-10 pt-2 flex flex-col gap-10">
+                    <div className="lg:w-[70%] pl-10 pr-10 pt-2 flex flex-col gap-10">
                         <div className="flex flex-col justify-center items-start">
                             <div className="flex flex-col gap-2">
                                 <h1 className='text-5xl font-semibold text-black'>Say hi!</h1>
                                 <h1 className='text-xl text-gray-600'>Always open to new ideas.</h1>
                             </div>
                         </div>
-                        <div className="w-[60%]">
+                        <div className="lg:w-[60%] w-full">
                             <h1 className='text-xl font-semibold text-gray-500'>Message</h1>
                             <label htmlFor='message' className='block text-gray-400'>Introduce yourself and share as much you can</label>
                             <textarea
@@ -113,7 +113,7 @@ const Contact = () => {
                                 <div className='text-red-500 text-sm'>{errors.email}</div>
                             )}
                         </div>
-                            <div className="w-[60%]">
+                            <div className="w-full lg:w-[60%]">
                                 <button type='submit' className='bg-black w-full h-16 text-2xl text-white rounded-full p-2'>Send message</button>
                             </div>
                     </div>

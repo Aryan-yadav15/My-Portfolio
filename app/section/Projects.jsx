@@ -4,17 +4,14 @@ import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ThreeDCardDemo } from '../components/ui/DemoHoverCard';
 import Link from 'next/link';
-import '../globals.css'
+import '../globals.css';
 import { motion, useAnimation } from 'framer-motion';
 
-
 const Projects = () => {
-
     const projectData = [
-        { id: 1, title: 'Project 1', description: 'Description for Project 1', color: 'bg-red-500', img: '/Mockup/pr1.png', techStack: ['React', 'Node.js', 'MongoDB'] },
-        { id: 2, title: 'Project 2', description: 'Description for Project 2', color: 'bg-blue-500', img: '/Mockup/pr2.png', techStack: ['Next.js', 'Express', 'MySQL'] },
-        { id: 3, title: 'Project 3', description: 'Description for Project 3', color: 'bg-green-500', img: '/Mockup/pr3.png', techStack: ['Vue.js', 'Firebase', 'GraphQL'] },
-        // Add more projects as needed
+        { id: 1, title: 'Project 1', link: 'https://zebiops.com', description: 'Description for Project 1', color: 'bg-red-500', img: '/Mockup/pr1.png', techStack: ['React', 'Node.js', 'MongoDB'] },
+        { id: 2, title: 'Project 2', link: 'zebiops.com', description: 'Description for Project 2', color: 'bg-blue-500', img: '/Mockup/pr2.png', techStack: ['Next.js', 'Express', 'MySQL'] },
+        { id: 3, title: 'Project 3', link: 'zebiops.com', description: 'Description for Project 3', color: 'bg-green-500', img: '/Mockup/pr3.png', techStack: ['Vue.js', 'Firebase', 'GraphQL'] },
     ];
 
     const [ref, inView] = useInView({
@@ -28,8 +25,6 @@ const Projects = () => {
             controls.start({ opacity: 1, y: 0 });
         }
     }, [controls, inView]);
-
-
 
     const [activeProjectId, setActiveProjectId] = useState(null); // Initialize with null or an initial project ID
 
@@ -65,7 +60,7 @@ const Projects = () => {
                         <ProjectCard
                             key={project.id}
                             project={project}
-                            onIntersection={(inView) => inView && handleSetActiveProject(project.id)}
+                            onIntersection={handleSetActiveProject}
                         />
                     ))}
                 </section>
@@ -80,26 +75,27 @@ const ProjectCard = ({ project, onIntersection }) => {
         rootMargin: '0px 0px -10% 0px', // Adjust root margin to control when intersection is triggered
     });
 
+    useEffect(() => {
+        if (inView) {
+            onIntersection(project.id);
+        }
+    }, [inView, onIntersection, project.id]);
+
     return (
         <Link href={'/'}>
             <div ref={ref}>
                 <ThreeDCardDemo project={project} />
-                {inView && onIntersection(project.id)} {/* Pass project.id to onIntersection */}
             </div>
         </Link>
     );
 };
 
-export default Projects;
-
-
-
-
-
 const TechPill = ({ tech }) => {
     return (
-        <div className="tech-pill text-sm px-4 py-2 font-light text-orange-100 m-1">
+        <div className="bg-gray-50 rounded-full text-sm px-4 py-2 font-medium text-gray-900 m-1">
             {tech}
         </div>
     );
 };
+
+export default Projects;
