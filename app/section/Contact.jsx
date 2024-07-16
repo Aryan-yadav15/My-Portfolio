@@ -8,7 +8,7 @@ const Contact = () => {
             <div className=' h-[100vh] text-gray-700  bg-slate-50 px-20 py-20 xlg:py-40 relative flex flex-col rounded-[30px] '>
                 <div className="flex flex-col justify-between">
                     <section className='absolute left-[10VW] top-[20vh] w-[80vw] h-[50vh] flex flex-col justify-center items-center'>
-                        <h1 className='text-gray-300 lg:text-gray-200 2xlg:text-[50rem] lg:text-[30rem] text-[12rem] leading-[0.1rem]'>hola</h1>
+                        <h1 className='text-gray-300 lg:text-gray-200 2xlg:text-[50rem] lg:text-[30rem] text-[11rem] leading-[0.1rem]'>hola</h1>
                     </section>
                     <Link href='/contact'>
                         <section className='absolute top-[41vh] left-16 lg:left-[25vw] xlg:left-[40rem]'>
