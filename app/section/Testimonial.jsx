@@ -9,9 +9,9 @@ import Link from 'next/link';
 
 const Testimonial = () => {
   const testimonials = [
-    { id: 1, name: 'Aryan Yadav', image: '/Mockup/pr1.1-1.png', quote: 'Being independent is one of the best ways you can be free to create immense value for your clients and customers. The only constraint is your imagination.' },
-    { id: 2, name: 'Lakshit Yadav', image: '/Mockup/pr2.1.png', quote: 'The best way to predict the future is to create it.' },
-    { id: 3, name: 'Karan Yadav', image: '/Mockup/pr3.1.png', quote: 'Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.' }
+    { id: 1, name: 'Lakshit Verma',company:'BitsToBugs', image: '/Mockup/pr1.1-1.png', quote: 'Aryan is incredibly punctual and has exceptional work ethics. Always reliable and dedicated, he consistently delivers quality work on time. ' },
+    { id: 2, name: 'ZORA',company:"zebiops", image: '/Mockup/pr2.1.png', quote: 'Aryan Yadavs work is truly commendable. His dedication, professionalism, and attention to detail make him a reliable and valuable asset to any project' },
+    { id: 3, name: 'Karan Yadav',company:"sda", image: '/Mockup/pr3.1.png', quote: 'Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.' }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +59,7 @@ const Testimonial = () => {
                   <div className="flex flex-col">
                     <h2 className="mt-4 text-xl font-semibold text-end gold-text">{currentTestimonial.name}</h2>
                     <Link href='/' className="text-md font-medium text-end opacity-40 leading-[0.1rem] flex items-center justify-end">
-                      {currentTestimonial.name}
+                      {currentTestimonial.company}
                       <ArrowUpRight className="ml-1" />
                     </Link>
                   </div>
