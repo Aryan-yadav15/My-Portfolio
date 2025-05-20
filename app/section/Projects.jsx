@@ -29,7 +29,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Web Scraper for Product Price Tracking",
-      link: "zebiops.com",
+      link: "https://thrift-track.vercel.app",
       description:
         "A web scraper designed to track product prices on Amazon and send email alerts when prices drop. Users can upload product URLs, and the system will periodically monitor their prices and send notifications via email for updates.",
       color: "bg-blue-500",
@@ -47,12 +47,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Project 3",
-      link: "zebiops.com",
-      description: "Description for Project 3",
+      title: "Mail Mesh",
+      link: "https://hackathon-xy7w.vercel.app",
+      description:
+        "An AI-powered automation tool that converts unstructured emails into structured PPOs for large businesses. Features an interactive logic canvas for deep client-specific workflow configuration, powered by advanced ML models and UiPath automation.",
       color: "bg-green-500",
       img: "/Mockup/pr3.png",
-      techStack: ["Vue.js", "Firebase", "GraphQL"],
+      techStack: ["Next.js", "UiPath", "Azure VM", "Cavas", "SQL","ML - Bert"],
     },
   ];
 
